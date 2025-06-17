@@ -45,13 +45,15 @@ Also, ensure that `gcc` and `make` are installed.
    ```bash
    sudo insmod KeyCounter.ko
    ```
-
-5. **To remove the module:**
+   
+   if you want to remove the module;
+   
+6. **To remove the module:**
    ```bash
    sudo rmmod KeyCounter.ko
    ```
 
-6. **To clean up the build files:**
+7. **To clean up the build files:**
    ```bash
    make clean
    ```
