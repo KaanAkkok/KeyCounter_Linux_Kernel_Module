@@ -2,8 +2,6 @@
 
 **KeyCounter** is a Linux kernel module that tracks keyboard key presses in real time using the keyboard notifier interface. It counts how many times each key is pressed and exposes the results via the `/proc/KeyCounter` file.
 
-This project is designed for learning purposes and aims to provide hands-on experience with low-level input handling and Linux kernel module programming in C.
-
 ---
 
 ## 🛠️ System Requirements & Dependencies
