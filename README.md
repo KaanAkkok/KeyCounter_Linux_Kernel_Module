@@ -15,7 +15,7 @@ Make sure you are working in a **Linux-based virtual machine or environment** an
 #### On Fedora:
 ```bash
 sudo dnf install kernel-devel kernel-headers
-sudo dnf groupinstall "C Development Tools and Libraries"
+sudo dnf groupinstall c-development
 ```
 
 #### On Ubuntu/Debian:
@@ -31,7 +31,7 @@ Also, ensure that `gcc` and `make` are installed.
 
 1. **Create a working directory and navigate into it:**
    ```bash
-   mkdir ~/KeyCounter && cd ~/KeyCounter
+   mkdir ~/PROJECT && cd ~/PROJECT
    ```
 
 2. **Add the following files:**
