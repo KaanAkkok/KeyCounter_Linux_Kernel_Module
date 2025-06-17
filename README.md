@@ -46,7 +46,7 @@ Also, ensure that `gcc` and `make` are installed.
    sudo insmod KeyCounter.ko
    ```
    
-   if you want to remove the module;
+  ## if you want to remove the module;
    
 6. **To remove the module:**
    ```bash
