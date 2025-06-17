@@ -74,3 +74,6 @@ cat /proc/KeyCounter
 
 Each line shows the key code and the number of times it has been pressed.
 
+### Resources:
+
+https://sysprog21.github.io/lkmpg/
