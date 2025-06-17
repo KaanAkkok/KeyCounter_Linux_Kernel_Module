@@ -62,7 +62,7 @@ Also, ensure that `gcc` and `make` are installed.
 
 ## 📊 Usage Instructions
 
-After loading the module, you can view the key press statistics by reading the `/proc/KeyCounter` file:
+After loading the module, you can view the key press counts by reading the `/proc/KeyCounter` file:
 
 ```bash
 cat /proc/KeyCounter
