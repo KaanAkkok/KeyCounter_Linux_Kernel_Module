@@ -1,31 +1,76 @@
-I. Introduction
+# KeyCounter Linux Kernel Module
 
-This project implements a Linux kernel module called KeyCounter that tracks keyboard key presses in real time. It uses the keyboard notifier interface to detect key events and counts how many times each key is pressed. The results are shown through the /proc/KeyCounter file. The goal is to explore low-level input handling and kernel module programming in C.
+**KeyCounter** is a Linux kernel module that tracks keyboard key presses in real time using the keyboard notifier interface. It counts how many times each key is pressed and exposes the results via the `/proc/KeyCounter` file.
 
-II. System Requirements and Dependencies
+This project is designed for learning purposes and aims to provide hands-on experience with low-level input handling and Linux kernel module programming in C.
 
-Before you begin, verify that you are working in a Linux-based virtual machine environment and that your system packages are up to date.
-Required Dependencies:
-•	Linux kernel development headers:
-   For Fedora: 
+---
+
+## 🛠️ System Requirements & Dependencies
+
+Make sure you are working in a **Linux-based virtual machine or environment** and that your system packages are up to date.
+
+### Required Packages
+
+#### On Fedora:
+```bash
 sudo dnf install kernel-devel kernel-headers
-sudo dnf groupinstall c-development
-   For Ubuntu:
+sudo dnf groupinstall "C Development Tools and Libraries"
+```
+
+#### On Ubuntu/Debian:
+```bash
 sudo apt install build-essential linux-headers-$(uname -r)
-•	GCC and Make tools
+```
 
-III. Compilation and Installation
+Also, ensure that `gcc` and `make` are installed.
 
-First, create a new directory in your home folder and add the KeyCounter.c source file along with a Makefile. Then, compile the module by running the make command. To insert the module into the kernel, use:
-sudo insmod KeyCounter.ko
-To remove the module, run:
-sudo rmmod KeyCounter.ko
-Finally, to clean up the build files, use:
-make clean
+---
 
-IV. Usage Instructions
+## ⚙️ Compilation & Installation
 
-After loading the module, use this command to view key press counts:
+1. **Create a working directory and navigate into it:**
+   ```bash
+   mkdir ~/KeyCounter && cd ~/KeyCounter
+   ```
+
+2. **Add the following files:**
+   - `KeyCounter.c` (the kernel module source code)
+   - `Makefile` (build configuration)
+
+3. **To compile the module:**
+   ```bash
+   make
+   ```
+
+4. **To insert the module into the kernel:**
+   ```bash
+   sudo insmod KeyCounter.ko
+   ```
+
+5. **To remove the module:**
+   ```bash
+   sudo rmmod KeyCounter.ko
+   ```
+
+6. **To clean up the build files:**
+   ```bash
+   make clean
+   ```
+
+---
+
+## 📊 Usage Instructions
+
+After loading the module, you can view the key press statistics by reading the `/proc/KeyCounter` file:
+
+```bash
 cat /proc/KeyCounter
-Example output:
-![resim](https://github.com/user-attachments/assets/47f51ca8-fa46-451c-ae76-ebf9f006e15d)
+```
+
+### Example Output:
+
+![KeyCounter Output](https://github.com/user-attachments/assets/47f51ca8-fa46-451c-ae76-ebf9f006e15d)
+
+Each line shows the key code and the number of times it has been pressed.
+
